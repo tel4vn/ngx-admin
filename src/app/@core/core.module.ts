@@ -53,6 +53,9 @@ import { VisitorsAnalyticsService } from './mock/visitors-analytics.service';
 import { SecurityCamerasService } from './mock/security-cameras.service';
 import { MockDataModule } from './mock/mock-data.module';
 
+
+import { UsersService } from './coreapi/user.service'
+
 const socialLinks = [
   {
     url: 'https://github.com/akveo/nebular',
@@ -72,6 +75,8 @@ const socialLinks = [
 ];
 
 const DATA_SERVICES = [
+  { provide: UsersService, useClass: UsersService },
+
   { provide: UserData, useClass: UserService },
   { provide: ElectricityData, useClass: ElectricityService },
   { provide: SmartTableData, useClass: SmartTableService },

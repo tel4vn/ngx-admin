@@ -1,0 +1,17 @@
+<nb-card>
+  <nb-card-header>
+    User list
+	<!-- <nb-actions size="medium">
+      <nb-action icon="nb-plus" (click)="addNew()"></nb-action>
+     
+    </nb-actions> -->
+  </nb-card-header>
+
+  <nb-card-body>
+    <ng2-smart-table 
+	    [settings]="settings" 
+	    [source]="source"
+      (custom)="onCustomAction($event)">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>
